@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // server on Render
-const baseUrl = 'http://127.0.0.1:3001/api/persons';
+const baseUrl = 'https://phonebook-backend-cool-glitter-662.fly.dev/api/persons';
 
 const getAll = () => {
 	return axios.get(baseUrl).then((response) => response.data);
