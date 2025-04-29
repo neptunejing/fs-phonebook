@@ -60,9 +60,9 @@ const App = () => {
 					setNewName('');
 					setNewNumber('');
 				})
-				.catch((error) => {
-					console.log(error.response.data.error);
-					setErrorMessage(error.response.data.error);
+				.catch((errorMessage) => {
+					console.log(errorMessage);
+					setErrorMessage(errorMessage);
 					setTimeout(() => {
 						setErrorMessage(null);
 					}, 5000);
@@ -86,9 +86,9 @@ const App = () => {
 					setSuccessMessage(null);
 				}, 5000);
 			})
-			.catch((error) => {
-				console.log(error.response.data.error);
-				setErrorMessage(error.response.data.error);
+			.catch((errorMessage) => {
+				console.log(errorMessage);
+				setErrorMessage(errorMessage);
 				setTimeout(() => {
 					setErrorMessage(null);
 				}, 5000);
