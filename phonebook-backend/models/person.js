@@ -6,6 +6,11 @@ const url = process.env.MONGODB_URI;
 
 console.log('connecting to', url);
 
+if (!url) {
+	console.error('MONGODB_URI not defined!');
+	process.exit(1);
+}
+
 mongoose
 	.connect(url)
 	.then(() => {
